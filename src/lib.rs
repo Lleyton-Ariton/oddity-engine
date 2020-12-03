@@ -1,5 +1,7 @@
 mod algos;
 mod collections;
+mod gaussian;
+
 use collections::timeseries::TimeSeries;
 
 use pyo3::prelude::*;

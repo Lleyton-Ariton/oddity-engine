@@ -1,7 +1,7 @@
-use crate::collections::timeseries;
-use timeseries::TimeSeries;
+#![allow(dead_code)]
 
 use std::f32::consts::{PI, E};
+use crate::collections::timeseries::TimeSeries;
 use crate::collections::matrix::Matrix;
 
 #[derive(Clone)]
@@ -43,7 +43,7 @@ impl GaussianDistribution {
     }
 
     pub fn predict(&self, x: f32) -> f32 {
-        let base = (1.0/(self.variance * (2.0 * PI).sqrt()));
+        let base = 1.0/(self.variance * (2.0 * PI).sqrt());
         let power = -0.5 * ((x - self.mean)/self.variance).powi(2);
 
         base * E.powf(power)
@@ -98,5 +98,12 @@ impl MultiDistGaussian {
             .zip(self.distributions.iter())
             .map(|x|x.1.predict(*x.0))
             .product()
+    }
+
+    pub fn is_anomaly(&self, x: Vec<f32>, epsilon: f32) -> u32 {
+        match self.predict(x) < epsilon {
+            true => 1,
+            false => 0
+        }
     }
 }
