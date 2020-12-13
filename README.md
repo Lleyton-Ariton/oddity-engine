@@ -12,3 +12,13 @@ The engine provides some of the following functionalities:
 - FFT for periodicity inference
 
 More functionality and general optimizations will be added in the future.
+
+## Important Links
+
+The following are some important links for more information:
+
+> PyPi: [https://pypi.org/project/oddity/](https://pypi.org/project/oddity/)
+
+> Oddity: [https://github.com/Lleyton-Ariton/oddity](https://github.com/Lleyton-Ariton/oddity)
+
+> Oddity Demo: [https://github.com/Lleyton-Ariton/oddity-demo](https://github.com/Lleyton-Ariton/oddity-demo)
