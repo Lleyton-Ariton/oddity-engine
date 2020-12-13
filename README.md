@@ -1,4 +1,4 @@
-# oddity-engine
+# Oddity Engine
 
 The anomaly detection and tools engine used by Oddity. The engine is used as a Python binding with PyO3, and therefore is currently not intended to be used as a standalone Rust library. 
 
